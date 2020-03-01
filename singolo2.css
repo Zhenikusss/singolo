@@ -140,6 +140,7 @@ a {
     margin-top: 11px;
     margin-bottom: 8px;
     max-height: 22px;
+    white-space: nowrap;
     overflow: hidden;
 }
 .personal p {
