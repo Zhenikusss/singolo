@@ -140,7 +140,19 @@ input::placeholder, textarea::placeholder {
     font-size: 12px;
     font-family: 'Lato-Regular', Arial, sans-serif;
     color: rgb(244, 140, 143);
-    line-height: 1.797;
+    opacity: 1;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    font-size: 12px;
+    font-family: 'Lato-Regular', Arial, sans-serif;
+    color: rgb(244, 140, 143);
+    opacity: 1;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    font-size: 12px;
+    font-family: 'Lato-Regular', Arial, sans-serif;
+    color: rgb(244, 140, 143);
+    opacity: 1;
 }
 #message {
     padding-top: 7px;
