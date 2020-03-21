@@ -15,38 +15,49 @@
                     <span class="logo__star">*</span>
                 </a>
                 <nav class="header__navigation">
-                    <ul class="navigation">
-                        <li><a class="navigation__link navigation__link_active" href="#">Home</a></li>
-                        <li><a class="navigation__link" href="#">Services</a></li>
-                        <li><a class="navigation__link" href="#">Portfolio</a></li>
-                        <li><a class="navigation__link" href="#">About</a></li>
-                        <li><a class="navigation__link" href="#">Contact</a></li>
+                    <ul id="menu" class="navigation">
+                        <li><a class="navigation__link navigation__link_active" href="#home">Home</a></li>
+                        <li><a class="navigation__link" href="#our-services">Services</a></li>
+                        <li><a class="navigation__link" href="#portfolio">Portfolio</a></li>
+                        <li><a class="navigation__link" href="#about-us">About</a></li>
+                        <li><a class="navigation__link" href="#feedback">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <section class="slider">
-        <div class="wrapper">
-            <div class="slide">
-                <div class="slide__phone slide__phone_one">
-                    <img class="slide__mobile" src="./assets/slide-phone.png" alt="slide-phone">
-                    <div class="slide__image slide__image_one"></div>
-                    <div class="slide__shadow slide__shadow_one"></div>
+    <section id="slider" class="slider">
+        <div class="slide">
+            <div id="home" class="anchor"></div>
+            <div id="slide-one" class="slide__item slide__item_active">
+                <div class="slide__wrapper">
+                    <div class="slide__phone slide__phone_one">
+                        <img id="mobileOne" class="slide__mobile" src="./assets/slide-phone.png" alt="slide-phone">
+                        <div id="mobile-1" class="slide__image slide__image_one"></div>
+                        <div class="slide__shadow slide__shadow_one"></div>
+                    </div>
+                    <div class="slide__phone slide__phone_two">
+                        <img id="mobileTwo" class="slide__mobile" src="./assets/slide-phone.png" alt="slide-phone">
+                        <div id="mobile-2" class="slide__image slide__image_two"></div>
+                        <div class="slide__shadow slide__shadow_two"></div>
+                    </div>
                 </div>
-                <div class="slide__phone slide__phone_two">
-                    <img class="slide__mobile" src="./assets/slide-phone.png" alt="slide-phone">
-                    <div class="slide__image slide__image_two"></div>
-                    <div class="slide__shadow slide__shadow_two"></div>
+            </div>
+            <div id="slide-two" class="slide__item">
+                <div class="slide__wrapper">
+                    <img src="./assets/slider-image-2.png" alt="slide-2">
                 </div>
-                <div class="slide__arrows">
-                    <button class="slide__arrow slide__arrow_left"></button>
-                    <button class="slide__arrow slide__arrow_right"></button>
+            </div>
+            <div class="slide__arrows">
+                <div class="arrows__wrapper">
+                    <button id="slider-button" class="slide__arrow slide__arrow_left"></button>
+                    <button id="slider-button" class="slide__arrow slide__arrow_right"></button>
                 </div>
             </div>
         </div>
     </section>
     <section class="our-services">
+        <div id="our-services" class="anchor"></div>
         <div class="wrapper">
             <div class="our-services__block">
                 <h2>Our Services</h2>
@@ -115,34 +126,41 @@
         </div>
     </section>
     <section class="portfolio">
+        <div id="portfolio" class="anchor"></div>
         <div class="wrapper">
             <div class="portfolio__block">
                 <h2>Portfolio</h2>
                 <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                <div class="portfolio__tags">
-                    <span class="tag tag_selected">All</span>
-                    <span class="tag tag_bordered">Web Design</span>
-                    <span class="tag tag_bordered">Graphic Design</span>
-                    <span class="tag tag_bordered">Artwork</span>
+                <div id="portfolio__tags" class="portfolio__tags">
+                    <span class="tag tag_selected change1">All</span>
+                    <span class="tag tag_bordered change2">Web Design</span>
+                    <span class="tag tag_bordered change3">Graphic Design</span>
+                    <span class="tag tag_bordered change4">Artwork</span>
                 </div>
-                <div class="gallery layout-4-column">
-                    <img src="./assets/image2-1.jpg" alt="image">
-                    <img src="./assets/image2-2.jpg" alt="image">
-                    <img src="./assets/image2-3.jpg" alt="image">
-                    <img src="./assets/image2-4.jpg" alt="image">
-                    <img src="./assets/image2-5.jpg" alt="image">
-                    <img src="./assets/image2-6.jpg" alt="image">
-                    <img src="./assets/image2-7.jpg" alt="image">
-                    <img src="./assets/image2-8.jpg" alt="image">
-                    <img src="./assets/image2-9.jpg" alt="image">
-                    <img src="./assets/image2-10.jpg" alt="image">
-                    <img src="./assets/image2-11.jpg" alt="image">
-                    <img src="./assets/image2-12.jpg" alt="image">
+                <div id="gallery" class="gallery layout-4-column">
+                    <img class="img-item" src="./assets/image2-1.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-2.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-3.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-4.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-5.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-6.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-7.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-8.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-9.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-10.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-11.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-12.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-1.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-2.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-3.jpg" alt="image">
+                    <img class="img-item" src="./assets/image2-4.jpg" alt="image">
+                    
                 </div>
             </div>
         </div>
     </section>
     <section class="about-us">
+        <div id="about-us" class="anchor"></div>
         <div class="wrapper">
             <div class="about-us__block">
                 <h2>About Us</h2>
@@ -190,6 +208,7 @@
         </div>
     </section>
     <section class="feedback">
+        <div id="feedback" class="anchor"></div>
         <div class="wrapper">
             <div class="feedback__block">
                 <h2>Get a Quote</h2>
@@ -198,7 +217,7 @@
                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
                 </p>
                 <div class="feedback__forms layout-2-column">
-                    <form class="form" action="#" method="get">
+                    <form id="form" class="form" action="#" method="get">
                             <input type="text" name="username" id="first-name" placeholder="Name (Required)" required> <br>
                             <input type="email" name="email-address" id="email" placeholder="Email (Required)" required> <br>
                             <input type="text" name="subject" id="subject" placeholder="Subject"> <br>
@@ -243,5 +262,20 @@
             </div>
         </div>
     </footer>
+    <div id="modal" class="modal-window hidden">
+        <div class="modal">
+            <div class="modal__title">Письмо отправлено!</div>
+            <div class="modal__subject">
+                <div class="modal__onsubject"><span id="subject-modal"></span></div>
+                <div id="notheme" class="modal__offsubject">Без темы</div>
+            </div>
+            <div class="modal__description">
+                <div class="modal__ondescription"><span id="message-modal"></span></div>
+                <div id="notheme-1" class="modal__offdescription">Без описания</div>
+            </div>
+            <button id="close-button">ОК</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
