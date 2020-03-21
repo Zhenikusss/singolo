@@ -492,6 +492,7 @@ a {
     max-height: 22px;
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 .personal p {
     font-size: 12px;
