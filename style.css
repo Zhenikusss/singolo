@@ -806,6 +806,8 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     width: 25px;
     height: 19.3px;
     display: none;
+    cursor: pointer;
+    transition: .5s;
 }
 .burger-menu:before {
     top: 0;
@@ -818,6 +820,9 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 .burger-menu__line {
     top: calc( 50% - 1.5px );
     left: 0;
+}
+.burger-logo {
+    display: none;
 }
 
 /* MEDIA */
@@ -904,6 +909,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
         display: inline-block;
         position: absolute;
         left: 20px;
+        z-index: 99;
     }
     .header-block {
         padding-left: 20px;
@@ -912,10 +918,31 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
         padding-right: 20px;
         display: flex;
         justify-content: center;
+        height: 24px;
     }
     .logo {
         margin-bottom: 2px;
         font-size: 20px;
+    }
+    .logo.change {
+        display: none;
+    }
+    /* .logo.change {
+        z-index: 99;
+        position: absolute;
+        top: 24px;
+        left: 71px;
+    } */
+    .burger-logo {
+        z-index: 99;
+        position: absolute;
+        top: 22px;
+        left: -278px;
+        transition: .5s;
+        display: block;
+    }
+    .burger-logo.change {
+        left: 71px;
     }
     .slider {
         margin-top: 71px;
@@ -1020,6 +1047,40 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     .footer .footer__block {
         justify-content: center;
     }
+    /* burger menu */
+    #menu {
+        display: block;
+        position: absolute;
+        left: -278px;
+        top: -8px;
+        width: 207px;
+        flex-direction: column;
+        background: #2d303a;
+        height: 100vh;
+        padding-top: 232px;
+        padding-left: 71px;
+        transition: .5s;
+    }
+    #menu.change {
+        left: 0px;
+    }
+    .navigation .navigation__link {
+        font-size: 24px;
+    }
+    .navigation li {
+        margin-left: 0px;
+        margin-bottom: 27px;
+    }
+    .burger-menu.change {
+        transform: rotate(90deg);
+        height: 20.3px;
+    }
+    .navigation li:not(:first-child):before {
+        display: none;
+    }
+    .anchor {
+        margin-top: -70px;
+    }
 }
 @media (max-width: 374.98px) {
     .tool,
@@ -1034,3 +1095,6 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
         margin-left: 2px;
     }
 }
+
+
+

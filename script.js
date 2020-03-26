@@ -186,3 +186,26 @@ CLOSE_BUTTON.addEventListener('click', () => {
     document.getElementById('modal').classList.add('hidden');
     FORM.reset();
 });
+
+// burger menu mobile
+const NAVBAR = document.querySelector('.navigation');
+const ICON = document.querySelector('.burger-menu');
+const BURGER_LOGO = document.querySelector('.burger-logo');
+const LOGO = document.querySelector('.change-logo');
+const BURGER_LINKS = document.querySelectorAll('#menu a');
+
+ICON.addEventListener('click', () => {
+    NAVBAR.classList.toggle('change');
+    ICON.classList.toggle('change');
+    BURGER_LOGO.classList.toggle('change');
+    LOGO.classList.toggle('change');
+});
+
+BURGER_LINKS.forEach((a) => {
+    a.addEventListener('click', () => {
+        NAVBAR.classList.remove('change');
+        ICON.classList.remove('change');
+        BURGER_LOGO.classList.remove('change');
+        LOGO.classList.remove('change');
+    });
+});
