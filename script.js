@@ -111,34 +111,31 @@ document.querySelector('.slide__arrow_right').addEventListener('click', function
 
 // Active TEGS AND PORTFOLIO CHANGES AND GALLERY IMG BORDER
 const TEG = document.getElementById('portfolio__tags');
-const FLEX_ITEM = document.querySelectorAll('.img-item');
 const GALLERY = document.getElementById('gallery');
 
 TEG.addEventListener('click', (event) => {
     TEG.querySelectorAll('span').forEach(el => el.classList.remove('tag_selected'));
     event.target.classList.add('tag_selected');
+    let el = document.querySelector("#gallery > div:nth-child(1)");
+
     if (event.target.classList[1] == 'change1') {
-        FLEX_ITEM[0].style.display = 'block';
-        FLEX_ITEM[1].style.display = 'block';
-        FLEX_ITEM[2].style.display = 'block';
+        el.remove();
+        GALLERY.append(el);
         GALLERY.querySelectorAll('img').forEach(el => el.classList.remove('active'));
-    };
+    }
     if (event.target.classList[2] == 'change2') {
-        FLEX_ITEM[1].style.display = 'block';
-        FLEX_ITEM[2].style.display = 'block';
-        FLEX_ITEM[0].style.display = 'none';
+        el.remove();
+        GALLERY.append(el);
         GALLERY.querySelectorAll('img').forEach(el => el.classList.remove('active'));
     };
     if (event.target.classList[2] == 'change3') {
-        FLEX_ITEM[2].style.display = 'block';
-        FLEX_ITEM[0].style.display = 'none';
-        FLEX_ITEM[1].style.display = 'none';
+        el.remove();
+        GALLERY.append(el);
         GALLERY.querySelectorAll('img').forEach(el => el.classList.remove('active'));
     };
     if (event.target.classList[2] == 'change4') {
-        FLEX_ITEM[0].style.display = 'none';
-        FLEX_ITEM[1].style.display = 'none';
-        FLEX_ITEM[2].style.display = 'none';
+        el.remove();
+        GALLERY.append(el);
         GALLERY.querySelectorAll('img').forEach(el => el.classList.remove('active'));
     };
 });
@@ -193,12 +190,16 @@ const ICON = document.querySelector('.burger-menu');
 const BURGER_LOGO = document.querySelector('.burger-logo');
 const LOGO = document.querySelector('.change-logo');
 const BURGER_LINKS = document.querySelectorAll('#menu a');
+const BODY = document.querySelector('body');
+//const BLUR = document.getElementById('blur');
 
 ICON.addEventListener('click', () => {
     NAVBAR.classList.toggle('change');
     ICON.classList.toggle('change');
     BURGER_LOGO.classList.toggle('change');
     LOGO.classList.toggle('change');
+    BODY.classList.toggle('change');
+    //BLUR.focus();
 });
 
 BURGER_LINKS.forEach((a) => {
@@ -207,5 +208,14 @@ BURGER_LINKS.forEach((a) => {
         ICON.classList.remove('change');
         BURGER_LOGO.classList.remove('change');
         LOGO.classList.remove('change');
+        BODY.classList.remove('change');
     });
 });
+
+// BLUR.addEventListener('blur', () => {
+//     NAVBAR.classList.remove('change');
+//     ICON.classList.remove('change');
+//     BURGER_LOGO.classList.remove('change');
+//     LOGO.classList.remove('change');
+//     BODY.classList.remove('change');
+// });
